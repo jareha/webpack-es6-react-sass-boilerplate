@@ -1,4 +1,4 @@
-# Webpack + React + ES6 + Sass boilerplate
+# Webpack + ES6 + React + Sass boilerplate
 Boilerplate for a modern install of React, including (opinionated) linting of ES6 and Sass.
 
 ## Installation
