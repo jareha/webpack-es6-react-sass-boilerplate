@@ -1,0 +1,59 @@
+{
+  "author": "Jonathan Horak",
+  "name": "webpack-es6-react-sass-boilerplate",
+  "description": "Boilerplate for a modern install of React, including (opinionated) linting of ES6 and Sass.",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode development",
+    "postinstall": "touch ./node_modules/.metadata_never_index",
+    "preinstall": "npm install -global eslint && npm install -global sass-lint",
+    "reinstall": "rm -rf node_modules && npm install",
+    "start": "webpack-dev-server --mode development"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/preset-react"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.10",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-env": "^7.16.10",
+    "@babel/preset-react": "^7.16.7",
+    "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "postcss-loader": "^6.2.1",
+    "react-hot-loader": "^4.13.0",
+    "sass": "^1.49.0",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^12.4.0",
+    "sass-resources-loader": "^2.2.4",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  }
+}

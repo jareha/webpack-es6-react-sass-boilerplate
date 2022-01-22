@@ -1,0 +1,24 @@
+// sass-lint:disable no-important
+
+.global
+  &--mobile-only
+    +breakpoint
+      display: none !important
+
+  &--desktop-only
+    // Generally, we don’t want to use `max-width`; this is an exception
+    @media (max-width: $breakpoint--large + 1)
+      display: none !important
+
+    // Callout: account for `sass-lint` spacing bug (https://github.com/sasstools/sass-lint/issues/978)
+    // sass-lint:disable empty-line-between-blocks
+
+  &--visually-hidden
+    border: 0
+    clip: rect(0 0 0 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px

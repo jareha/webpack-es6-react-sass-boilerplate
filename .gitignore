@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+
+# Build-generated
+build
+
+# Macintosh
+.DS_Store
+
+# Windows
+Thumbs.db
