@@ -23,7 +23,7 @@ const HelloWorld = (props) => {
 
 HelloWorld.defaultProps = {
   content: {
-    header: componentName.titlecase,
+    header: "Webpack + ES6 + React + Sass boilerplate",
   },
   options: {
     className: componentName.class,

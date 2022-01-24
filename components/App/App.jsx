@@ -16,7 +16,6 @@ const App = (props) => {
 
   return (
     <div className={options.className}>
-      <h1>{componentName.titlecase}</h1>
       <HelloWorld />
     </div>
   );
