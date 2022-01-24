@@ -45,6 +45,7 @@ module.exports = {
       "warn", {
         code: 95,
         ignoreComments: true,
+        ignorePattern: "<(.*)>.*?|<(.*) />", // Ignore lines with HTML
         ignoreStrings: true,
         ignoreTemplateLiterals: true,
         ignoreUrls: true,
