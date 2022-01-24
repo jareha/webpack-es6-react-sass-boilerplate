@@ -4,6 +4,7 @@ const webpack = require("webpack");
 const root = path.resolve(__dirname);
 
 const paths = {
+  assets: `${root}/assets`,
   components: `${root}/components`,
   layouts: `${root}/layouts`,
   output: `${root}/build`,
@@ -14,6 +15,7 @@ const paths = {
 
 const regex = {
   javascript: /\.(js|jsx)$/,
+  images: /\.(jpg|png|svg)$/i,
   nodeModules: /(node_modules)/,
   sass: /\.sass$/,
 };
@@ -45,6 +47,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: regex.images,
+        type: "asset/resource",
       },
       {
         test: regex.sass,
@@ -84,12 +90,13 @@ module.exports = {
     ],
   },
   output: {
-    filename: "bundle.js",
+    filename: "app.js",
     path: paths.output,
     publicPath: paths.public,
   },
   resolve: {
     alias: {
+      assets: paths.assets,
       components: paths.components,
       styles: paths.styles,
       utilities: paths.utilities,
