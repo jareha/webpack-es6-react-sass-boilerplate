@@ -1,3 +1,5 @@
+import CONSTANTS from "./constants";
+
 function getComponentName(url, length = 2) {
   const fragments = url.split("/");
   let name = fragments[fragments.length - length];
@@ -6,7 +8,7 @@ function getComponentName(url, length = 2) {
   const dashcase = name.replace(regex, "$1-$2").toLowerCase();
 
   name = {
-    class: `component--${dashcase}`,
+    class: `${CONSTANTS.COMPONENT.CLASSNAME.PREFIX}${dashcase}`,
     dashcase,
     default: name,
     lowercase: name.toLowerCase(),
